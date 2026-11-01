@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://demo/cycle/cycle_right.tscn" id="1"]
+
+[node name="CycleLeft" type="Node2D"]
+
+[node name="Right" parent="." instance=ExtResource("1")]
