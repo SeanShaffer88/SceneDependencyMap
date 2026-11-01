@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://demo/chain/chain_07.tscn" id="1"]
+
+[node name="Chain06" type="Node2D"]
+
+[node name="Next" parent="." instance=ExtResource("1")]
