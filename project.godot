@@ -1,0 +1,29 @@
+; Engine configuration file.
+; This root project is the DEMO + TEST project for the Scene Dependency Map
+; addon (addons/scene_dependency_map). Its demo/ scenes deliberately contain
+; an unused file, a dead cycle, a live cycle, a deep chain, a missing file,
+; a hub autoload and a heavily autoload-coupled script, so the test suite
+; can verify every flag the tool raises.
+
+config_version=5
+
+[application]
+
+config/name="Scene Dependency Map — Demo"
+run/main_scene="res://demo/main/main.tscn"
+config/features=PackedStringArray("4.3", "GL Compatibility")
+config/icon="res://demo/shared/icon.svg"
+
+[autoload]
+
+GameState="*res://demo/autoloads/game_state.gd"
+AudioBus="*res://demo/autoloads/audio_bus.gd"
+SaveBus="*res://demo/autoloads/save_bus.gd"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/scene_dependency_map/plugin.cfg")
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
